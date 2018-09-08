@@ -47,20 +47,20 @@ int main(int argc, char *argv[]){
     bit 5 - bottom right segment
     bit 6 - middle segment
 
-    0 - 0x3F
-    1 - 0x30
-    2 - 0x5B
-    3 - 0x79
-    4 - 0x74
-    5 - 0x6D
-    6 - 0x6F
-    7 - 0x38
-    8 - 0x7F
-    9 - 0x7C
+    0 - 0b00111111
+    1 - 0b00110000
+    2 - 0b01011011
+    3 - 0b01111001
+    4 - 0b01110100
+    5 - 0b01101101
+    6 - 0b01101111
+    7 - 0b00111000
+    8 - 0b01111111
+    9 - 0b01111100
   */
 
-  std::vector<uint8_t> numbers = {0x3F, 0x30, 0x5B, 0x79, 0x74,
-                                  0x6D, 0x6F, 0x38, 0x7F, 0x7C};
+  std::vector<uint8_t> numbers = {0b00111111, 0b00110000, 0b01011011, 0b01111001, 0b01110100,
+                                  0b01101101, 0b01101111, 0b00111000, 0b01111111, 0b01111100};
 
   for (uint8_t i = 0; i < 8; ++i) {
     data[3] = 0;
