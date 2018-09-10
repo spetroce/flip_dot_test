@@ -30,3 +30,8 @@ cd flip_dot_test/build
 ```
 The path to the serial device must be first argument.
 
+Example usage:
+```bash
+./flip_dot_test /dev/ttyUSB0
+```
+
