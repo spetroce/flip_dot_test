@@ -15,7 +15,8 @@ FlipDotTest::FlipDotTest(QWidget *parent) :
 
 
 FlipDotTest::~FlipDotTest() {
-  Disconnect();
+  if(serial_com_.IsInit())
+    Disconnect();
   delete ui_;
 }
 
