@@ -14,7 +14,7 @@ int CommandLineTest(const char *kDevPort) {
   SegmentTest(serial_com);
   NumberTest(serial_com);
 
-  serial_com.Uninit(true);
+  serial_com.Uninit();
   return 0;
 }
 #endif
