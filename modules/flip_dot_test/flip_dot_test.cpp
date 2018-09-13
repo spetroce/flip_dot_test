@@ -15,19 +15,32 @@ FlipDotTest::FlipDotTest(QWidget *parent) :
 
 
 FlipDotTest::~FlipDotTest() {
+  Disconnect();
   delete ui_;
+}
+
+
+void FlipDotTest::ConnectEnable(const bool connected) {
+  ui_->push_button_connect->setEnabled(!connected);
+  ui_->push_button_disconnect->setEnabled(connected);
+  ui_->push_button_segment_test->setEnabled(connected);
+  ui_->push_button_number_test->setEnabled(connected);
+  ui_->push_button_display_number->setEnabled(connected);
+  ui_->spin_box_number->setEnabled(connected);
 }
 
 
 void FlipDotTest::Connect() {
   EXP_CHK(SetupSerialCom(serial_com_, ui_->line_edit_dev_str->text().toUtf8().constData()) == 0, return)
   std::cout << FFL_STRM << "connected\n";
+  ConnectEnable(true);
 }
 
 
 void FlipDotTest::Disconnect() {
   EXP_CHK(serial_com_.Uninit() == 0, return)
   std::cout << FFL_STRM << "disconnected\n";
+  ConnectEnable(false);
 }
 
 

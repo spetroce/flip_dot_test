@@ -42,6 +42,9 @@
       </item>
       <item>
        <widget class="QPushButton" name="push_button_disconnect">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
          <string>Disconnect</string>
         </property>
@@ -53,6 +56,9 @@
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
        <widget class="QPushButton" name="push_button_segment_test">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
          <string>Segment Test</string>
         </property>
@@ -60,6 +66,9 @@
       </item>
       <item>
        <widget class="QPushButton" name="push_button_number_test">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
          <string>Number Test</string>
         </property>
@@ -74,6 +83,9 @@
       </item>
       <item>
        <widget class="QPushButton" name="push_button_display_number">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="text">
          <string>Display Number</string>
         </property>
@@ -81,6 +93,9 @@
       </item>
       <item>
        <widget class="QSpinBox" name="spin_box_number">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="maximum">
          <number>9</number>
         </property>

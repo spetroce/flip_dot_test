@@ -13,6 +13,8 @@ class FlipDotTest : public QMainWindow {
   Ui::FlipDotTest *ui_;
   SerialCom serial_com_;
 
+  void ConnectEnable(const bool connected);
+
   public:
     explicit FlipDotTest(QWidget *parent = 0);
     ~FlipDotTest();
