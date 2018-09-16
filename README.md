@@ -13,7 +13,7 @@ git submodule update --init --recursive
 ```
 
 # Build
-By default, the cmake option WITH_QT is set and cmake will try find and build this program with a graphical interface. If the option is turned off or Qt could not be found by cmake, the program will build with a command line only interface. The command line interface only takes as input the serial device path and runs a segment test followed by a number test. The graphical interface allows you to run tests at will with push buttons.
+By default, the cmake option WITH_QT is set and cmake will try find Qt5 and build this program with a graphical interface. If the option is turned off or Qt5 could not be found by cmake, the program will build with a command line only interface. The command line interface only takes as input the serial device path and runs a segment test followed by a number test. The graphical interface allows you to run tests at will with push buttons.
 
 ```bash
 cd flip_dot_test #ie. change to root repo directory
